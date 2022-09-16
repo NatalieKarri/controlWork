@@ -12,11 +12,11 @@ Console.Write("Введите элементы массива через про�
 string[] array = Console.ReadLine().Split(' ',StringSplitOptions.RemoveEmptyEntries);
 string[] result = new string[array.Length];
 int size = 0;
-foreach (string value in array)
+foreach (string element in array)
 {
-    if(value.Length <= 3)
+    if(element.Length <= 3)
     {
-        result[size] = value;
+        result[size] = element;
         size++;
     }
 }
