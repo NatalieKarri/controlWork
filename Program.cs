@@ -10,4 +10,17 @@ Console.Clear();
 Console.Write("Введите элементы массива через пробел: ");
 
 string[] array = Console.ReadLine().Split(' ',StringSplitOptions.RemoveEmptyEntries);
+string[] result = new string[array.Length];
+int size = 0;
+foreach (string value in array)
+{
+    if(value.Length <= 3)
+    {
+        result[size] = value;
+        size++;
+    }
+}
+
 ShowArray(array);
+Console.WriteLine();
+ShowArray(result);
